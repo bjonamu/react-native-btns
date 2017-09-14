@@ -3,17 +3,17 @@ import { Metrics, Colors } from '../Themes'
 
 export default StyleSheet.create({
   defaultButton: {
-    height: Metrics.baseHeight,
     justifyContent: 'center',
     alignItems: 'center'
   },
   defaultLabel: {
     color: Colors.snow,
-    paddingHorizontal: Metrics.baseMargin
+    paddingHorizontal: Metrics.baseMargin,
+    fontSize: 14,
+    fontWeight: '600'
   },
   buttonWithIcon: {
     flex: 1,
-    height: Metrics.baseHeight,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

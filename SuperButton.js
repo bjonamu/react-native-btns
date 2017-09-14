@@ -2,26 +2,25 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 import Button from './Button'
-import { Colors } from './Themes'
+import { Metrics, Colors } from './Themes'
 import Styles from './Styles/ButtonStyles'
 
-const SuperButton = ({ leftIcon, rightIcon, label, labelStyle, uppercase, active, disabled, round, full, softCorners, backgroundColor, borderColor, activityIndicatorColor, onPress }) => {
+const SuperButton = ({ size, label, labelStyle, uppercase, leftIcon, rightIcon, active, disabled, round, softCorners, backgroundColor, borderColor, borderWidth, activityIndicatorColor, onPress }) => {
   let borderRadius = 0
+  const height = Metrics.buttons[size] + borderWidth
   if (round) {
-    borderRadius = 25
+    borderRadius = height / 2
   } else if (softCorners) {
     borderRadius = 4
   }
-  let customStyle = { backgroundColor, borderColor, borderRadius }
-  if (full) {
-    customStyle.flex = 1
-    customStyle.alignSelf = 'stretch'
-  }
+
+  let customStyle = { flex: 1, backgroundColor, borderColor, borderWidth, borderRadius, height }
+
   if (leftIcon || rightIcon) {
     return (
       <Button style={[ Styles.buttonWithIcon, customStyle ]} active={active} disabled={disabled} onPress={onPress} activityIndicatorColor={activityIndicatorColor}>
         <View style={Styles.iconCont}>{leftIcon}</View>
-        <Text style={labelStyle || Styles.defaultLabel}>{uppercase ? label.toUpperCase() : label }</Text>
+        <Text style={labelStyle}>{uppercase ? label.toUpperCase() : label }</Text>
         <View style={Styles.iconCont}>{rightIcon}</View>
       </Button>
     )
@@ -41,13 +40,17 @@ const SuperButton = ({ leftIcon, rightIcon, label, labelStyle, uppercase, active
 }
 
 SuperButton.defaultProps = {
+  size: 'normal',
   label: 'Super button',
+  labelStyle: Styles.defaultLabel,
   activityIndicatorColor: Colors.snow,
-  backgroundColor: Colors.transparent
+  backgroundColor: Colors.transparent,
+  borderColor: Colors.transparent,
+  borderWidth: 0
 }
 
 SuperButton.propTypes = {
-  full: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'normal', 'large']),
   round: PropTypes.bool,
   active: PropTypes.bool,
   label: PropTypes.string,
