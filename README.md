@@ -1,6 +1,8 @@
 # react-native-btns
 
-React native buttons for real world app. Easy to setup, configure and use.
+React native buttons for real world apps. Easy to setup, configure and use.
+
+[![Screenshot](https://s26.postimg.org/st94b9o5l/Simulator_Screen_Shot_15_Sep_2017_10.17.44_AM.png)](https://postimg.org/image/t60ihg6f9/)
 
 ## Installation
 
