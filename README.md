@@ -1,6 +1,6 @@
 # react-native-btns
 
-React native buttons to
+React native buttons for real world app. Easy to setup, configure and use.
 
 ## Installation
 
@@ -27,7 +27,9 @@ import { LinkButton, IconButton, SuperButton, FooterButton } from 'react-native-
   onPress={() => this.doSomethingUseful()}
 />
 ```
-LinkButton props
+
+#### LinkButton props
+
 | Props                  | Default values | Possible values                            |
 | ---------------------- | -------------- | ------------------------------------------ |
 | label                  | Link button    | **any string**                             |
@@ -51,7 +53,9 @@ LinkButton props
   onPress={() => this.doSomethingUseful()}
 />
 ```
-IconButton props
+
+#### IconButton props
+
 | Props                  | Default values | Possible values             |
 | ---------------------- | -------------- | --------------------------- |
 | size                   | 50             | Integer                     |
@@ -72,7 +76,9 @@ IconButton props
   onPress={() => this.doSomethingUseful()}
 />
 ```
-SuperButton props
+
+#### SuperButton props
+
 | Props                  | Default values | Possible values                            |
 | ---------------------- | -------------- | ------------------------------------------ |
 | size                   | 'normal'       | enum 'tiny', 'normal', 'large'             |
@@ -104,7 +110,9 @@ SuperButton props
   onPress={() => this.doSomethingUseful()}
 />
 ```
-FooterButton props
+
+#### FooterButton props
+
 | Props                  | Default values | Possible values                            |
 | ---------------------- | -------------- | ------------------------------------------ |
 | size                   | 'normal'       | enum 'tiny', 'normal', 'large'             |
@@ -121,3 +129,4 @@ FooterButton props
 
 TODO
 * ADD: disabledColor prop
+* ADD: elevation prop
