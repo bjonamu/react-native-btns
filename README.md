@@ -6,23 +6,23 @@ React native buttons for real world apps. Easy to setup, configure and use.
 
 ## Installation
 
-  ```
+  ```bash
   npm install react-native-btns --save
   ```
   or
-  ```
+  ```bash
   yarn add react-native-btns
   ```
 
 ## Usage
 
-```
+```js
 import { LinkButton, IconButton, SuperButton, FooterButton } from 'react-native-btns'
 ```
 
 ### LinkButton
 
-```
+```js
 <LinkButton
   uppercase
   labelStyle={styles.label}
@@ -46,7 +46,7 @@ import { LinkButton, IconButton, SuperButton, FooterButton } from 'react-native-
 
 ### IconButton
 
-```
+```js
 <IconButton
   round
   size={50}
@@ -70,7 +70,7 @@ import { LinkButton, IconButton, SuperButton, FooterButton } from 'react-native-
 
 ### SuperButton
 
-```
+```js
 <SuperButton
   uppercase
   size='large'
@@ -101,7 +101,7 @@ import { LinkButton, IconButton, SuperButton, FooterButton } from 'react-native-
 
 ### FooterButton
 
-```
+```js
 <FooterButton
   uppercase
   size='large'
